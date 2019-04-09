@@ -4,10 +4,12 @@ var app = express();
 
 app.set("view engine", "ejs");
 app.use(layouts);
+app.use("/", express.static("public"));
 
 app.get("/", (req, res)=>{
-  res.send("homepage");
+  res.render("home");
 });
 
-app.listen(8000, ()=>console.log("listening on port 8000");
+app.listen(8000, ()=>{
+  console.log("listening on port 8000");
 });
