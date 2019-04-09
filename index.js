@@ -6,10 +6,19 @@ app.set("view engine", "ejs");
 app.use(layouts);
 app.use("/", express.static("public"));
 
-app.get("/", (req, res)=>{
+// add body parser
+app.use(express.urlencoded({ extended: false }));
+
+app.use("/dinosaurs", require("./controllers/dinosaurs"));
+
+app.get("/", (req, res) => {
   res.render("home");
 });
 
-app.listen(8000, ()=>{
+app.get("*", (req, res) => {
+  res.send("error 404 boom dead")
+})
+
+app.listen(8000, () => {
   console.log("listening on port 8000");
 });
