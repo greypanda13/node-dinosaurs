@@ -1,0 +1,11 @@
+<% include ../partials/nav-cryptid.ejs %>
+<h1>Make new cryptid foo'</h1>
+
+<form class="new-cryptid" action="/cryptids" method="post">
+  <label for="img-url">Image URL</label>
+  <input type="text" name="img_url" placeholder="www.cryptidpichost.com/pic1">
+
+  <label for="name">Cryptid name</label>
+  <input type="text" name="name" placeholder="boogieman">
+  <input type="submit" name="submit-button" value="Log this cryptid!">
+</form>

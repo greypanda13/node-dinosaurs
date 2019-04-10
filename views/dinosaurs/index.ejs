@@ -1,9 +1,10 @@
+<% include ../partials/nav-dino.ejs %>
 <h1>dinos landing</h1>
 
 
 <h3>dinos o' viewin'</h3>
 <ul>
-  <% myDinos.forEach((dino) => { %>
-    <li><%= dino.name %> is a <%= dino.type %></li>
+  <% myDinos.forEach((dino, index) => { %>
+    <li><a href="/dinosaurs/<%= index %>"><%= dino.name %></a> is a <%= dino.type %></li>
   <% }) %>
 </ul>

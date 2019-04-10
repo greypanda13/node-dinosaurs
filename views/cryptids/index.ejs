@@ -1,0 +1,11 @@
+<% include ../partials/nav-cryptid.ejs %>
+<h1>cryptids landing</h1>
+
+
+<h3>cryptids o' viewin'</h3>
+<ul>
+  <% myCryptid.forEach((cryptid, index) => { %>
+    <li><a href="/cryptids/<%= index %>"><%= cryptid.name %></a><br>
+      <a href="https://www.google.com/search?q=<%= cryptid.name %>"><img src="<%= cryptid.img_url %>" alt=""></a></li>
+  <% }) %>
+</ul>

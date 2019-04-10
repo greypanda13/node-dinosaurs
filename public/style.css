@@ -5,3 +5,8 @@ body {
   display: inline;
   margin-left: 1em;
 }
+
+img {
+  height: 350px;
+  width: auto;
+}
